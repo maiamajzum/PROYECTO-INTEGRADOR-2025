@@ -43,10 +43,11 @@ El proyecto tiene la siguiente estructura de archivos:
 /package.json     # Archivo de configuración de dependencias
 /vite.config.js   # Configuración de Vite
 
+
+
 ## Captura de pantalla
 
 ![image](https://github.com/user-attachments/assets/21cbc5ab-897d-45de-bd4b-3b1fa14411c7)
 
 
 
-Tailwind CSS: Framework de CSS para la creación rápida de interfaces.
