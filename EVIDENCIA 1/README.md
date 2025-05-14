@@ -36,16 +36,17 @@ Esto abrirá la aplicación en el navegador en http://localhost:5173.
 
 El proyecto tiene la siguiente estructura de archivos:
 
+```
 ├──/src
 |   ├──/App.css      Estilos de la aplicación
 |   ├──/App.jsx      Componente principal de React
 |   ├──/index.jsx    Punto de entrada de la aplicación
 ├──/package.json     Archivo de configuración de dependencias
 └──/vite.config.js   Configuración de Vite
-     
+```     
 
+## Captura de pantalla
 
-
-
+![image](https://github.com/user-attachments/assets/8977d52a-0682-48b9-b391-9cdebc8d7c6a)
 
 
