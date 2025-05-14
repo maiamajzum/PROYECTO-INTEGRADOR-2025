@@ -1,4 +1,4 @@
-# Proyecto de Productos con React
+# EVIDENCIA 2
 
 Este proyecto es una aplicación de React que muestra una lista de productos obtenidos desde una API externa utilizando `axios`. Los productos se presentan en una grilla responsiva utilizando Tailwind CSS.
 
