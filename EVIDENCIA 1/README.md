@@ -4,7 +4,7 @@ Este proyecto es una aplicación de React que muestra una lista de productos obt
 
 ## Requisitos previos
 
-Antes de ejecutar el proyecto, debems asegurarte de tener instaladas las siguientes herramientas en tu PC:
+Antes de ejecutar el proyecto, debes asegurarte de tener instaladas las siguientes herramientas en tu PC:
 
 - [Node.js](https://nodejs.org/) (version 14 o superior)
 - [npm](https://www.npmjs.com/) (viene con Node.js)
