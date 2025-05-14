@@ -32,7 +32,7 @@ npm run dev
 
 Esto abrirá la aplicación en el navegador en http://localhost:5173.
 
-##Estructura del Proyecto
+## Estructura del Proyecto
 
 El proyecto tiene la siguiente estructura de archivos:
 
@@ -43,7 +43,7 @@ El proyecto tiene la siguiente estructura de archivos:
 /package.json     # Archivo de configuración de dependencias
 /vite.config.js   # Configuración de Vite
 
-##Captura de pantalla
+## Captura de pantalla
 
 ![image](https://github.com/user-attachments/assets/21cbc5ab-897d-45de-bd4b-3b1fa14411c7)
 
