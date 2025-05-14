@@ -4,7 +4,7 @@ Este proyecto es una aplicación de React que muestra una lista de productos obt
 
 ## Requisitos previos
 
-Antes de ejecutar el proyecto, asegúrate de tener lo siguiente instalado en tu máquina:
+Antes de ejecutar el proyecto, debems asegurarte de tener instaladas las siguientes herramientas en tu PC:
 
 - [Node.js](https://nodejs.org/) (version 14 o superior)
 - [npm](https://www.npmjs.com/) (viene con Node.js)
@@ -13,9 +13,8 @@ Antes de ejecutar el proyecto, asegúrate de tener lo siguiente instalado en tu 
 
 1. **Clonar el repositorio:**
 
-   Si aún no tienes el proyecto en tu máquina, clónalo desde GitHub usando el siguiente comando:
+   Clona el proyecto en tu máquina, desde Git Bash usando el siguiente comando:
 
-   ```bash
    git clone https://github.com/maiamajzum/PROYECTO-INTEGRADOR-2025/tree/main/EVIDENCIA%201
 
 2. **Instalar las dependencias:**
@@ -39,11 +38,14 @@ El proyecto tiene la siguiente estructura de archivos:
 
 /src
   /App.css        # Estilos de la aplicación
-  /App.jsx         # Componente principal de React
-  /index.jsx       # Punto de entrada de la aplicación
+  /App.jsx        # Componente principal de React
+  /index.jsx      # Punto de entrada de la aplicación
 /package.json     # Archivo de configuración de dependencias
 /vite.config.js   # Configuración de Vite
 
+##Captura de pantalla
+
+![image](https://github.com/user-attachments/assets/21cbc5ab-897d-45de-bd4b-3b1fa14411c7)
 
 
 
