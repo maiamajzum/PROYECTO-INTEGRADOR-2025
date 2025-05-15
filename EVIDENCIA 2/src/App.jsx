@@ -1,7 +1,7 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// Importamos los componentes 
+// Importamos los componentes
 import ProductList from "./components/ProductList";
 import StatsPanel from "./components/StatsPanel";
 
@@ -16,12 +16,12 @@ function App() {
         });
     }, []);
 
-    // Filtramos los productos obtenidos de la API si search esta vacio se muestran todos los productos
-   const filteredProducts = search
-  ? products.filter((p) =>
-      p.title.toLowerCase().includes(search.toLowerCase())
-    )
-  : products;
+    // Filtramos los productos obtenidos de la API si search está vacío se muestran todos los productos
+    const filteredProducts = search
+        ? products.filter((p) =>
+              p.title.toLowerCase().includes(search.toLowerCase())
+          )
+        : products;
 
     // Estadísticas
     const totalProducts = filteredProducts.length;
@@ -39,25 +39,25 @@ function App() {
 
     return (
         <>
-            <h1 className="text-3xl text-blue-600 font-bold">Lista de productos:</h1>
+            <h1 className="text-3xl text-blue-600 font-bold mb-4 border-b-2 border-gray-300">Lista de productos:</h1>
 
             <input
                 type="text"
                 placeholder="Buscar producto"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                className="border-2 border-gray-300 p-2 mb-6 rounded-lg w-full"
             />
 
             <ProductList products={filteredProducts} />
 
- <button
-    onClick={() => setShow(!show)}
-    className="px-6 py-2 bg-blue-500 text-white rounded-lg border-2 border-blue-600 hover:bg-blue-600 hover:border-blue-700 transition-all duration-300 ease-in-out shadow-md mt-6"
->
-    {show ? "Ocultar" : "Mostrar"}
-</button>
+            <button
+                onClick={() => setShow(!show)}
+                className="px-6 py-2 bg-blue-500 text-white rounded-lg border-2 border-blue-600 hover:bg-blue-600 hover:border-blue-700 transition-all duration-300 ease-in-out shadow-md mt-6"
+            >
+                {show ? "Ocultar" : "Mostrar"}
+            </button>
 
-    
             {show && filteredProducts.length > 0 && (
                 <StatsPanel
                     total={totalProducts}
@@ -69,8 +69,7 @@ function App() {
                 />
             )}
 
- 
-            {filteredProducts.length === 0 && <div>No se encontraron productos</div>}
+            {filteredProducts.length === 0 && <div className="text-gray-500 mt-4">No se encontraron productos</div>}
         </>
     );
 }
