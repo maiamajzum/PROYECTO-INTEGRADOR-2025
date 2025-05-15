@@ -67,5 +67,6 @@ El proyecto tiene la siguiente estructura de archivos:
 ```     
 ## Captura de pantalla
 
-![image](https://github.com/user-attachments/assets/ffa4c139-6313-44f7-9f85-faa97cfbefe8)
+![image](https://github.com/user-attachments/assets/155a29f1-3af5-4888-8e23-0fa3888cce84)
+
 
