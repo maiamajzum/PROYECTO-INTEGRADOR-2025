@@ -7,13 +7,14 @@ Este proyecto es una aplicación de React que permite visualizar una lista de pr
 -Filtrado de Productos: Permite buscar productos por nombre. Si no se ingresa texto en el campo de búsqueda, se muestran todos los productos.
 
 -Estadísticas de Productos: Muestra estadísticas como:
+  ```
   Número total de productos
   Producto con el precio más alto
   Producto con el precio más bajo
   Cantidad de productos con títulos largos (más de 20 caracteres)
   Precio total de todos los productos filtrados
   Descuento promedio de los productos
-
+  ```
 -Interactividad: La sección de estadísticas se puede mostrar u ocultar con un botón.
 
 ## Requisitos previos
