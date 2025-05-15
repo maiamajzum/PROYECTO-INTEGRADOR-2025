@@ -24,10 +24,9 @@ Accede al directorio del proyecto y ejecuta el siguiente comando para instalar t
 cd tu-repositorio
 npm install
 
-3. **Ejecutar el proyecto:**
+3. **Ejecutar el Proyecto:**
 
 Para iniciar la aplicación en tu entorno local, ejecuta el siguiente comando:
-
 npm run dev
 
 Esto abrirá la aplicación en el navegador en http://localhost:5173.

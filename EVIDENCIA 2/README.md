@@ -1,20 +1,28 @@
 # EVIDENCIA 2
 
-Este proyecto es una aplicación de React que permite visualizar una lista de productos obtenidos desde una API externa (DummyJSON) utilizando axios. La lista de productos se presenta de forma responsiva y filtrable, utilizando Tailwind CSS. Los usuarios pueden buscar productos por nombre y visualizar estadísticas relacionadas con la lista de productos.
+Este proyecto es una aplicación de React que muestra una lista de productos obtenidos desde una API externa utilizando axios. Los productos se presentan en una grilla responsiva utilizando Tailwind CSS.
 
-**Características:**
+**Estadísticas Agregadas**
+En esta aplicación, se incluyen las siguientes estadísticas relacionadas con los productos obtenidos:
+```
+1-Número total de productos filtrados: Muestra el total de productos que cumplen con el criterio de búsqueda ingresado por el usuario.
+2-Producto con el precio más alto: Muestra el producto con el precio más alto de los productos filtrados.
+3-Producto con el precio más bajo: Muestra el producto con el precio más bajo de los productos filtrados.
+4-Cantidad de productos con títulos largos: Cuenta cuántos productos tienen un título de más de 20 caracteres.
+5-Precio total de los productos filtrados: Suma el precio de todos los productos que cumplen con el filtro de búsqueda.
+6-Descuento promedio de los productos: Calcula el promedio de los descuentos aplicados a los productos filtrados.
+```
+Estas estadísticas se presentan en un panel que puede ser mostrado u ocultado por el usuario.
 
--Filtrado de Productos: Permite buscar productos por nombre. Si no se ingresa texto en el campo de búsqueda, se muestran todos los productos.
+**División del Código en Componentes**
 
--Estadísticas de Productos: Muestra estadísticas como:
-  Número total de productos
-  Producto con el precio más alto
-  Producto con el precio más bajo
-  Cantidad de productos con títulos largos (más de 20 caracteres)
-  Precio total de todos los productos filtrados
-  Descuento promedio de los productos
+El código se ha dividido en dos componentes principales para mejorar la organización y la reutilización del código:
 
--Interactividad: La sección de estadísticas se puede mostrar u ocultar con un botón.
+-ProductList: Este componente es responsable de mostrar la lista de productos filtrados. Recibe como propiedad la lista de productos y los muestra en una grilla.
+
+-StatsPanel: Este componente se encarga de mostrar las estadísticas calculadas sobre los productos filtrados. Recibe como propiedades las estadísticas como el total de productos, el producto con el precio más alto, el producto con el precio más bajo, la cantidad de productos con títulos largos, el precio total y el descuento promedio.
+
+La aplicación principal (App.jsx) gestiona el estado de los productos, el filtro de búsqueda y el control de la visibilidad del panel de estadísticas. Se utiliza useEffect para hacer la solicitud de los productos a la API externa y actualizar el estado de la aplicación.
 
 ## Requisitos previos
 
@@ -29,7 +37,7 @@ Antes de ejecutar el proyecto, debes asegurarte de tener instaladas las siguient
 
    Clona el proyecto en tu máquina, desde Git Bash usando el siguiente comando:
 
-   git clone https://github.com/maiamajzum/PROYECTO-INTEGRADOR-2025/tree/main/EVIDENCIA%201
+   git clone https://github.com/maiamajzum/PROYECTO-INTEGRADOR-2025/tree/main/EVIDENCIA%202
 
 2. **Instalar las dependencias:**
 
@@ -38,10 +46,9 @@ Accede al directorio del proyecto y ejecuta el siguiente comando para instalar t
 cd tu-repositorio
 npm install
 
-3. **Ejecutar el proyecto:**
+3. **Ejecutar el Proyecto:**
 
 Para iniciar la aplicación en tu entorno local, ejecuta el siguiente comando:
-
 npm run dev
 
 Esto abrirá la aplicación en el navegador en http://localhost:5173.
