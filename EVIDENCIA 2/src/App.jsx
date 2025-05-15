@@ -1,8 +1,9 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-//Importamos componentes propios
-import Stats from "./components/Stats";
+// Importamos los componentes 
+import ProductList from "./components/ProductList";
+import StatsPanel from "./components/StatsPanel";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -15,30 +16,23 @@ function App() {
         });
     }, []);
 
-    //Filtramos los productos obtenidos de la API
-    const filteredProducts = products.filter((p) => p.title.toLowerCase().includes(search.toLowerCase()));
+    // Filtramos los productos obtenidos de la API si search esta vacio se muestran todos los productos
+   const filteredProducts = search
+  ? products.filter((p) =>
+      p.title.toLowerCase().includes(search.toLowerCase())
+    )
+  : products;
 
-    //Cantidad de productos en pantalla
+    // Estadísticas
     const totalProducts = filteredProducts.length;
-
-  // El producto más caro
-const maxProduct =
-  filteredProducts.length > 0
-    ? filteredProducts.reduce((max, product) => (product.price > max.price ? product : max), filteredProducts[0])
-    : null;
-
-// El producto más barato
-const minProduct =
-  filteredProducts.length > 0
-    ? filteredProducts.reduce((min, product) => (product.price < min.price ? product : min), filteredProducts[0])
-    : null;
-// Cantidad de productos cuyo título contiene más de 20 caracteres
+    const maxProduct = filteredProducts.length > 0
+        ? filteredProducts.reduce((max, product) => (product.price > max.price ? product : max), filteredProducts[0])
+        : null;
+    const minProduct = filteredProducts.length > 0
+        ? filteredProducts.reduce((min, product) => (product.price < min.price ? product : min), filteredProducts[0])
+        : null;
     const longTitleCount = filteredProducts.filter((p) => p.title.length > 20).length;
-
-    // Precio total de los productos filtrados
     const totalPrice = filteredProducts.reduce((total, product) => total + product.price, 0);
-
-    // Promedio de descuento de los productos filtrados
     const averageDiscount = filteredProducts.length > 0
         ? filteredProducts.reduce((total, product) => total + product.discountPercentage, 0) / filteredProducts.length
         : 0;
@@ -51,24 +45,21 @@ const minProduct =
                 type="text"
                 placeholder="Buscar producto"
                 value={search}
-                onChange={(e) => {
-                    setSearch(e.target.value);
-                }}
+                onChange={(e) => setSearch(e.target.value)}
             />
 
-            <ul>
-                {filteredProducts.map((p) => (
-                    <li key={p.id}>
-                        {p.title} {p.price}
-                    </li>
-                ))}
-            </ul>
+            <ProductList products={filteredProducts} />
 
-            <button onClick={() => setShow(!show)}>{show ? "Ocultar" : "Mostrar"}</button>
+ <button
+    onClick={() => setShow(!show)}
+    className="px-6 py-2 bg-blue-500 text-white rounded-lg border-2 border-blue-600 hover:bg-blue-600 hover:border-blue-700 transition-all duration-300 ease-in-out shadow-md mt-6"
+>
+    {show ? "Ocultar" : "Mostrar"}
+</button>
 
-            {/* Renderización condicional */}
+    
             {show && filteredProducts.length > 0 && (
-                <Stats
+                <StatsPanel
                     total={totalProducts}
                     max={maxProduct}
                     min={minProduct}
@@ -77,7 +68,9 @@ const minProduct =
                     averageDiscount={averageDiscount}
                 />
             )}
-            {filteredProducts.length == 0 && <div>No se encontraron productos</div>}
+
+ 
+            {filteredProducts.length === 0 && <div>No se encontraron productos</div>}
         </>
     );
 }
