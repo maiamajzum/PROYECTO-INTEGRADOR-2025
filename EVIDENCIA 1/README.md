@@ -31,19 +31,17 @@ npm install
 
 Si por alguna razón Tailwind CSS no está instalado, puedes hacerlo manualmente siguiendo estos pasos:
 
--Instalar Tailwind CSS y sus dependencias:
-npm install -D tailwindcss postcss autoprefixer
+-Instalar Tailwind CSS y sus dependencias: npm install -D tailwindcss postcss autoprefixer
 
--Crear los archivos de configuración de Tailwind:
-npx tailwindcss init
+-Crear los archivos de configuración de Tailwind: npx tailwindcss init
 
 -Configurar Tailwind en tu archivo CSS principal (src/App.css):
+```
 /* src/App.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+```
 4. **Ejecutar el Proyecto:**
 
 Para iniciar la aplicación en tu entorno local, ejecuta el siguiente comando:
