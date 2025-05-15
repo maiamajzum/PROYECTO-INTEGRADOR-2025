@@ -20,7 +20,7 @@ El código se ha dividido en dos componentes principales para mejorar la organiz
 
 -ProductList: Este componente es responsable de mostrar la lista de productos filtrados. Recibe como propiedad la lista de productos y los muestra en una grilla.
 
-StatsPanel: Este componente se encarga de mostrar las estadísticas calculadas sobre los productos filtrados. Recibe como propiedades las estadísticas como el total de productos, el producto con el precio más alto, el producto con el precio más bajo, la cantidad de productos con títulos largos, el precio total y el descuento promedio.
+-StatsPanel: Este componente se encarga de mostrar las estadísticas calculadas sobre los productos filtrados. Recibe como propiedades las estadísticas como el total de productos, el producto con el precio más alto, el producto con el precio más bajo, la cantidad de productos con títulos largos, el precio total y el descuento promedio.
 
 La aplicación principal (App.jsx) gestiona el estado de los productos, el filtro de búsqueda y el control de la visibilidad del panel de estadísticas. Se utiliza useEffect para hacer la solicitud de los productos a la API externa y actualizar el estado de la aplicación.
 
