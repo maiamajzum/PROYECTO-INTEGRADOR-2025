@@ -8,6 +8,9 @@ Antes de ejecutar el proyecto, debes asegurarte de tener instaladas las siguient
 
 - [Node.js](https://nodejs.org/) (version 14 o superior)
 - [npm](https://www.npmjs.com/) (viene con Node.js)
+- React (el proyecto ya está configurado para usar React)
+- Axios (para hacer solicitudes HTTP)
+- Tailwind CSS (para la parte de estilos)
 
 ## Pasos para ejecutar el proyecto
 
@@ -24,10 +27,26 @@ Accede al directorio del proyecto y ejecuta el siguiente comando para instalar t
 cd tu-repositorio
 npm install
 
-3. **Ejecutar el proyecto:**
+3. **Instalar Tailwind CSS (si no está incluido):**
+
+Si por alguna razón Tailwind CSS no está instalado, puedes hacerlo manualmente siguiendo estos pasos:
+
+-Instalar Tailwind CSS y sus dependencias:
+npm install -D tailwindcss postcss autoprefixer
+
+-Crear los archivos de configuración de Tailwind:
+npx tailwindcss init
+
+-Configurar Tailwind en tu archivo CSS principal (src/App.css):
+/* src/App.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+4. **Ejecutar el Proyecto:**
 
 Para iniciar la aplicación en tu entorno local, ejecuta el siguiente comando:
-
 npm run dev
 
 Esto abrirá la aplicación en el navegador en http://localhost:5173.
